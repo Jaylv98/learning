@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>点击换图</title>
+	</head>
+	<body>
+		
+		<img id="a" src="img/0.jpg" />
+		
+		
+		<script>
+			
+			/* 1.获取图片对象
+			2.绑定单击事件
+			3.每次点击切换图片
+					使用标记flag完成 */
+					
+			
+		//获取图片对象
+		var a=document.getElementById("a");
+		
+		var flag=false;//代表是a图片  原始图片
+		//绑定单击事件
+		a.onclick=function(){
+			if(flag){//判断是否为原始图片，是则换图
+				a.src="img/英雄联盟.jpg";
+				flag=false
+			}else{//如果是更换后的图片，则替换会原始图片
+				a.src="img/0.jpg";
+				flag=true;
+			}
+			
+			
+		}
+					
+		</script>
+	</body>
+</html>

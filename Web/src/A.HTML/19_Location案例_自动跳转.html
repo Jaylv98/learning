@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style>
+			p{
+				text-align: center;
+			}
+			
+			span{
+				color: red;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		
+		<p>
+			<span id="time">5</span> 秒后自动跳转页面.....
+		</p>
+		
+		
+		
+		
+		<script>
+			
+			/* 
+					分析：
+						1.显示页面效果 <p>
+						2.倒计时读秒效果实现
+								定义一个方法，获取span标签，修改span标签体内容，
+								定义一个定时器，一秒执行一次该方法
+						3.在方法中判断时间如果小于<=0,则跳转到页面
+			 
+			 */
+			
+			
+			
+			//倒计时读秒效果实现
+			var second=5;
+			function showTime(){
+				second--;
+				if(second<=0){
+					location.href="https://www.baidu.com/";
+				}
+				
+				var time=document.getElementById("time");
+				time.innerHTML=second+"";
+			}
+			
+			
+			//设置定时器，1秒执行一次
+			setInterval(showTime,1000);
+		</script>
+		
+	</body>
+</html>

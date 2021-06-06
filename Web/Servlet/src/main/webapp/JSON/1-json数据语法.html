@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+/*
+
+        语法：
+            基本规则
+                数据在名称/值对中：json数据是由键值对构成
+                    键用引号（单双都可）引起来，也可以不使用引号
+                    值的取值类型：
+					        数字（整数或浮点数）
+					        字符串（在双引号中）
+					        逻辑值（true 或 false）
+					        数组（在中括号中）
+					        对象（在大括号中）
+					        null
+                数据由逗号分隔：多个键值对由逗号分隔
+                大括号 {} 保存对象：使用{}定义json格式
+                中括号 [] 保存数组，数组可以包含多个对象
+
+
+            获取数据
+			        json对象.键名
+			        json对象["键名"]
+			        数组对象[索引]
+
+*/
+
+
+        //定义基本格式
+        var person={"name":"张三","age":23,'gender':true};
+        //alert(person);
+
+
+        //获取name的值
+        //var name = person.name;
+        var name=person["name"];
+        //alert(name);
+
+
+        //嵌套格式
+        //   {}  -->  []
+        var persons={
+            "persons":[
+            {"name":"张三","age":23,'gender':true},
+            {"name":"李四","age":28,'gender':true},
+            {"name":"王五","age":26,'gender':true}]};
+        //alert(persons);
+        var name1 = persons.persons[2].name;//获取王五
+       // alert(name1);
+
+
+
+        //[] -->{}
+        var ps=[{"name":"张三","age":23,'gender':true},
+            {"name":"李四","age":28,'gender':true},
+            {"name":"王五","age":26,'gender':true}];
+        //alert(ps);
+
+        alert(ps[1].name)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

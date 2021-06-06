@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+			div{
+				border: 1px red solid;
+			}
+			
+			#div1{
+				width: 200px;
+				height: 200px;
+			}
+			
+			#div2{
+				width: 100px;
+				height: 100px;
+			}
+			
+			#div3{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="div1">	div1
+		
+		<div id="div2"> div2</div>
+		</div>
+		
+		
+		<!-- 
+				超链接功能：
+						1.可以被点击：样式
+						2.点击后跳转到href指定的url
+						
+					需求：保留1功能，去掉2功能
+					实现：href="javascript:void(0);"
+		 
+		 -->
+		
+		<a id="del" href="javascript:void(0);">删除子节点</a>
+		
+		<a id="add" href="javascript:void(0);">添加子节点</a>
+		<script>
+			
+			
+			/* Node：节点对象，其他5个的父对象
+								特点：所有DOM对象都可以被认为是一个节点
+								方法：
+									CRUD DOM树：
+										appendChild()：向节点的子节点列表的结尾添加新的子节点
+										removeChild()：删除（并返回）当前节点的指定子节点。
+										replaceChild()：用新节点替换一个子节点 */
+		
+		
+		
+			//removeChild()：删除（并返回）当前节点的指定子节点。
+			var a=document.getElementById("del");
+			a.onclick=function(){
+				var div1=document.getElementById("div1");
+				var div2=document.getElementById("div2");
+				div1.removeChild(div2);
+			}
+			
+			
+			//appendChild()：向节点的子节点列表的结尾添加新的子节点
+			var b=document.getElementById("add");
+			b.onclick=function(){
+				var div1=document.getElementById("div1");
+				//给div1添加子节点  
+				//创建div节点
+				var div3=document.createElement("div");
+				div3.setAttribute("id","div3");
+				div1.appendChild(div3);
+			}
+			
+			//parentNode属性
+			var div2=document.getElementById("div2");
+			var div1=div2.parentNode;
+			alert(div1);
+		</script>
+	</body>
+</html>

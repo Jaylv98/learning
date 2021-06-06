@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	
+	<body>
+		
+		<!-- 
+				innerHTML:修改标签体内容
+		 -->
+		 
+		 <div id="div1">
+			 
+			 div
+			 	
+			 </div>
+			 
+		<script>
+			
+			var div=document.getElementById("div1");
+			var innerHTML=div.innerHTML;
+			//div标签中替换一个文本输入框
+			//div.innerHTML="<input type='button'>";
+			
+			//div标签中追加一个文本输入框
+			div.innerHTML+="<input type='button' />";
+			
+		</script>
+		
+	</body>
+</html>

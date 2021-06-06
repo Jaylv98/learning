@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<a>请点击</a>
+		<input type="button" id="btn_set" value="设置属性" />
+		
+		<script>
+			//获取btn
+			var btn_set=document.getElementById("btn_set");
+			btn_set.onclick=function(){
+				//获取a标签
+				var ele_a=document.getElementsByTagName("a")[0];
+				ele_a.setAttribute("href","https://www.baidu.com/")
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

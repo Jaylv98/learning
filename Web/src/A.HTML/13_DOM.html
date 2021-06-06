@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>获取元素对象</title>
+		
+		
+	</head>
+	<body>
+		
+		<!-- 功能：控制html文档的内容
+				代码：获取页面标签（元素）对象 Element
+					document.getElementById("id值")：通过元素的id获取元素的对象
+				操作Element对象
+					1.修改属性值：
+						1.明确获取的对象是哪一个
+						2.查看API文档，找其中有哪些属性可以设置
+					2.修改标签体内容：
+						属性：innerHTML
+						1.获取元素对象
+						2.使用innerHTML属性修改标签体内容
+		 -->
+		
+		
+		
+		<img id="a" src="img/0.jpg" />
+		<h1 id="b">原始内容 </h1>		
+		
+		<script>
+			
+			//通过id获取元素对象
+			var a=document.getElementById("a");
+			alert("换图片ing");
+			a.src="img/英雄联盟.jpg";
+			
+			
+			
+			
+			/* var b=document.getElementById("b");
+			alert("更换内容ing");
+			b.innerHTML="内容已更换" */
+			
+		</script>
+		
+		
+	</body>
+</html>

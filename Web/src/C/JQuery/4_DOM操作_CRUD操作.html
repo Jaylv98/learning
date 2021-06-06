@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        div.visible{
+            display: none;
+        }
+    </style>
+
+
+<!--
+
+    CRUD操作
+        append()：父元素将子元素追加到末尾
+            对象1.append（对象2）：将对象2添加到对象1元素内部，并且在末尾
+        prepend（）：父元素将子元素追加到开头
+            对象1.prepend（对象2）：将对象2添加到对象1元素内部，并且在开头
+        appendTo（）：
+            对象1.appendTo（对象2）：将对象1添加到对象2元素内部，并且在末尾
+        prependTo（）：
+            对象1.prependTo（对象2）：将对象1添加到对象2元素内部，并且在开头
+
+        after()：添加元素到元素后边
+            对象1.after(对象2)：将对象2添加到对象1后边。对象1和对象2是兄弟关系
+        before()：添加元素到元素前边
+            对象1.after(对象2)：将对象2添加到对象1前边。对象1和对象2是兄弟关系
+        insertAfter()：
+            对象1.insertAfte(对象2)：将对象2添加到对象1后边。对象1和对象2是兄弟关系
+        insertBefore()：
+            对象1.insertBefore(对象2)：将对象2添加到对象1前边。对象1和对象2是兄弟关系
+
+        remove()：移除对象
+            对象.remove（）：将对象移除
+        empty()：清空元素的所有后代元素
+            对象.empty()：将对象的后代元素全部清空，但是保留当前对象及其属性节点
+-->
+
+
+    <script>
+        $(function () {
+            //<input type="button" value="将反恐放置到city后面" id="b1">
+            $("#b1").click(function () {
+                //append
+                //$("#city").append($("#fk"));
+                //appendTo
+                $("#fk").appendTo($("#city"));
+            })
+            //<input type="button" value="将反恐放置到city最前面" id="b2">
+            $("#b2").click(function () {
+                //append
+                //$("#city").prepend($("#fk"));
+                //appendTo
+                $("#fk").prependTo($("#city"));
+            })
+            //<input type="button" value="将反恐插入到天津后面" id="b3">
+            $("#b3").click(function () {
+                //after
+               // $("#tj").after($("#fk"));
+                //insertAfter
+                $("#fk").insertAfter($("#tj"));
+            })
+            //<input type="button" value="将反恐插入到天津前面" id="b4">
+            $("#b4").click(function () {
+                //before
+                // $("#tj").before($("#fk"));
+                //insertBefore
+                $("#fk").insertBefore($("#tj"));
+
+            })
+
+
+
+
+            //<input type="button" value="删除<li id='bj1' name='beijing1'> 北京</li>" id="b5">
+            $("#b5").click(function () {
+                $("#bj1").remove();
+
+            })
+            //<input type="button" value="删除所有的子节点  清空元素中的所有后代节点（不包括属性节点）" id="b6">
+            $("#b6").click(function () {
+                $("#city1").empty();
+
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+
+<input type="button" value="将反恐放置到city后面" id="b1">
+<input type="button" value="将反恐放置到city最前面" id="b2">
+<input type="button" value="将反恐插入到天津后面" id="b3">
+<input type="button" value="将反恐插入到天津前面" id="b4">
+<ul id="city">
+    <li id="bj" name="beijing">北京</li>
+    <li id="tj" name="tianjin">天津</li>
+    <li id="cq" name="chongqing">重庆</li>
+</ul>
+
+<ul id="love">
+    <li id="fk" name="fankong">反恐</li>
+    <li id="xj" name="xingji">星际</li>
+
+</ul>
+
+<div id="fool">Hello</div>
+
+
+
+
+<hr>
+
+<input type="button" value="删除<li id='bj1' name='beijing1'> 北京</li>" id="b5">
+<input type="button" value="删除city1所有的li节点  清空元素中的所有后代节点（不包括属性节点）" id="b6">
+
+<ul id="city1">
+    <li id="bj1" name="beijing"> 北京</li>
+    <li id="tj1" name="tianjin"> 天津</li>
+    <li id="cq1" name="chongqing"> 重庆</li>
+</ul>
+
+</body>
+</html>

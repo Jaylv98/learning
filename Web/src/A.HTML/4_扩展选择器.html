@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style>
+			
+			div p{
+				color: red;
+			}
+			
+			
+			div>p{
+				border: 1px solid;
+			}
+			
+			
+			input[type="text"] {
+				border: 5px solid;
+			}
+			
+			
+			a:link{
+				color: pink;
+			}
+			
+			a:active{
+				color: green;
+			}
+			
+			a:hover{
+				color: yellow;
+			}
+			
+			a:visited{
+				color: red;
+			}
+			
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		
+		
+		
+		
+		<!-- 扩展选择器：
+					选择所有元素：
+						*{}
+					并集选择器：
+						选择器1,选择器2{}
+					子选择器：筛选选择器1元素下的选择器2元素
+						选择器1 选择器2{}
+					父选择器：筛选选择器2的父元素选择器1
+						选择器1>选择器2{}
+					属性选择器：选择元素名称，属性名=属性值的元素
+						元素名称[属性名="属性值"]{}
+					伪类选择器：选择一些元素具有的状态
+						元素:状态{}
+						如：<a>
+						状态：
+							link:初始化的状态
+							visited:被访问过的状态
+							active:正在访问的状态
+							hover:鼠标悬浮的状态 -->
+							
+							
+							
+			<div>
+				<p>子选择器</p>
+				<p>父选择器</p>
+			</div>
+			
+			
+			属性选择器 <input type="text" />  <br>
+			
+			
+			<a href="#"> 伪类选择器</a>
+	</body>
+</html>

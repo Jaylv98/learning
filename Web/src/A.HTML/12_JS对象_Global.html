@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script>
+			/* 
+					Golbal:
+						1.特点：全局对象，Global中封装的方法不需要对象就可以直接调用。	方法名();
+						2.方法：
+								encodeURI()：url编码
+								decodeURI()：url解码
+								
+								编码的字符更多
+								encodeURIComponent()：url编码
+								decodeURIComponent()：url解码
+								
+								parseInt():将字符串转为数字
+									逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+								isNaN():判断一个值是否为NaN
+									NaN六亲不认，连自己都不认，NaN参与的==比较全为false
+								eval():将JavaScript的字符串转化成脚本来执行
+						3.URL编码
+							传智播客=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+			 
+			 */
+			
+			var str="http://www.baidu.com?wd=传智播客";
+			var encode=encodeURI(str);
+			document.write(encode+"<br>");    //http://www.baidu.com?wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+			var decode=decodeURI(encode);
+			document.write(decode);		//http://www.baidu.com?wd=传智播客
+			
+			
+			document.write("<br>");
+			
+			var str1="http://www.baidu.com?wd=传智播客";
+			var encode1=encodeURIComponent(str1);
+			document.write(encode1+"<br>");    //http%3A%2F%2Fwww.baidu.com%3Fwd%3D%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+			var decode1=decodeURIComponent(encode1);
+			document.write(decode1);		//http://www.baidu.com?wd=传智播客
+			
+			
+			//var str="132"
+			//var str="132abc"
+			var str="a123sad"
+			var number=parseInt(str);
+			//alert(number+1)
+			
+			document.write("<br>");
+			
+			
+			var a=NaN;
+			document.write(a==NaN+"<br>");
+			document.write("<br>");
+			document.write(isNaN(a)+"<br>");
+			
+			
+			document.write("<br>");
+			var b="alert(123)"
+			eval(b);
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
